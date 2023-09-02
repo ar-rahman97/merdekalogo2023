@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/merdeka.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jari">
+            <div class="jari1"></div>
+            <div class="jari2"></div>
+            <div class="jari3"></div>
+            <div class="jari4"></div>
+            <div class="jari5"></div>
+        </div>
+        <div class="bulat">
+            <div class="bulan"></div>
+            <div id="bintang" class="bintang"></div>
+        </div>
+    </div>
+    <script>
+        const bucu = document.getElementById('bintang')
+        const bucubintang = 14
+        const sudutbintang = 360/bucubintang
+        for (let i=1; i<bucubintang+1; i++) {
+            let newdiv = document.createElement("div")
+            newdiv.className = "point"
+            newdiv.style.transform = `rotate(${(i*sudutbintang).toFixed(3)}deg) translateX(-50%)`;
+            bucu.appendChild(newdiv)
+        }
+    </script>
+</body>
+</html>
